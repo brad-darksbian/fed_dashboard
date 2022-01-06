@@ -46,6 +46,7 @@ base_path = "./data/"
 # Base retrieval function - reads from CSV
 def get_fed_data():
     file_path = base_path + "fed_data.csv"
+    # file_path = base_path + "fed_dump.csv"
     df = pd.read_csv(file_path, na_values="x")
     df.rename(
         {"data": "report_data", "hash": "report_hash"},
