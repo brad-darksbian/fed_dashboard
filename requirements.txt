@@ -4,3 +4,4 @@ full_fred==0.0.9a3
 dash==2.0.0
 plotly==5.4.0
 numpy==1.20.2
+statsmodels=0.13.1
