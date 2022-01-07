@@ -6,6 +6,10 @@
 
     This file is called by both the main app as well as the business logic
 
+    Note: It's called silently by plotly express, but the statsmodels
+    package is also a requirement.  This is because we are using linear
+    regression lines in the basic_chart function.
+
 """
 import pandas as pd
 import numpy as np

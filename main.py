@@ -365,5 +365,11 @@ def dashboard_summary_numbers(report):
 # Server Run
 ###################################################
 if __name__ == "__main__":
-    # app.run_server(debug=False, host="0.0.0.0", port=8050, dev_tools_hot_reload=True)
-    app.run_server(debug=True)
+    # This line works for linux / OSX. Change debug to True to turn on debugging
+    app.run_server(debug=False, host="0.0.0.0", port=8050, dev_tools_hot_reload=True)
+    # Windows seems to dislike running with the host set to 0.0.0.0
+    # app.run_server(
+    #   debug=False,
+    #   port=8050,
+    #   dev_tools_hot_reload=True
+    #   )
