@@ -30,6 +30,7 @@ report_list = [
     "ICSA",  # Unemployment
     "CCSA",  # Continued Unemployment
     "JTSJOL",  # Job Openings: Total Nonfarm
+    "JTSQUL",  # Job Quits: Total Nonfarm
     "PAYEMS",  # Non-Farm Employment
     "NPPTTL",  # Total Nonfarm Private Payroll Employment (ADP)
     "RSXFS",  # Retail Sales

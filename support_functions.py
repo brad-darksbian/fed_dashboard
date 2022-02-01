@@ -49,8 +49,8 @@ base_path = "./data/"
 """
 # Base retrieval function - reads from CSV
 def get_fed_data():
-    file_path = base_path + "fed_data.csv"
-    # file_path = base_path + "fed_dump.csv"
+    # file_path = base_path + "fed_data.csv"
+    file_path = base_path + "fed_dump.csv"
     df = pd.read_csv(file_path, na_values="x")
     df.rename(
         {"data": "report_data", "hash": "report_hash"},
@@ -217,6 +217,9 @@ def add_report_long_names(df1):
                 index, "report_long_name"
             ] = "Manufacturer New Orders: Nondefense Capital Goods Excluding Aircraft"
             df.loc[index, "category"] = "Production"
+        if df.loc[index, "report_name"] == "JTSQUL":
+            df.loc[index, "report_long_name"] = "Job Quits: Total Nonfarm"
+            df.loc[index, "category"] = "Employment"
 
     return df
 
